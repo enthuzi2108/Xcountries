@@ -21,7 +21,7 @@ function App() {
         console.log(res.data,"fetchData...")
       })
     } catch (error) {
-      console.assertlog("Checking error...")
+      console.error("Checking error...")
     }
   }, []);
   return (
