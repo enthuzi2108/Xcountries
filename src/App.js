@@ -15,13 +15,11 @@ function App() {
   const [data,setData] = useState([])
   const url = 'https://xcountries-backend.azurewebsites.net/all'
   useEffect(() => {
-    // Code for the side effect
     try {
       const fetchedData =  axios.get(url).then(res => {
          setData(res.data);
         console.log(res.data,"fetchData...")
       })
-      //console.log(fetchedData,"fetchData...")
     } catch (error) {
       console.assertlog("Checking error...")
     }
@@ -35,12 +33,12 @@ function App() {
             <CardMedia
               component="img"
               height="140"
-              image={item.flag} // Use image URL from the data
+              image={item.flag} 
               alt={item.name}
             />
             <CardContent>
               <Typography gutterBottom sx={{fontSize:"1em"}}>
-                {item.name} {/* Use title from the data */}
+                {item.name} 
               </Typography>
             </CardContent>
           </Card>
